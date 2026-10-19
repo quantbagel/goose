@@ -1,0 +1,46 @@
+{
+  "name": "abstract_inc",
+  "engine": "openai",
+  "display_name": "Abstract",
+  "description": "Fast serverless open models (GLM 5.3, Kimi K3, DeepSeek V4 Flash) over the OpenAI Responses API",
+  "api_key_env": "ABSTRACT_API_KEY",
+  "base_url": "https://api.abstract.inc",
+  "base_path": "v1/responses",
+  "models": [
+    {
+      "name": "glm-5.3:superfast",
+      "context_limit": 262144,
+      "input_token_cost": 0.00000119,
+      "output_token_cost": 0.0000044,
+      "cache_read_token_cost": 0.00000026,
+      "currency": "USD",
+      "supports_vision": false
+    },
+    {
+      "name": "kimi-k3:superfast",
+      "context_limit": 262144,
+      "input_token_cost": 0.000003,
+      "output_token_cost": 0.00001275,
+      "cache_read_token_cost": 0.0000003,
+      "currency": "USD",
+      "supports_vision": false
+    },
+    {
+      "name": "deepseek-v4-flash:superfast",
+      "context_limit": 262144,
+      "input_token_cost": 0.0000001,
+      "output_token_cost": 0.00000025,
+      "cache_read_token_cost": 0.00000005,
+      "currency": "USD",
+      "supports_vision": false
+    }
+  ],
+  "dynamic_models": false,
+  "skip_canonical_filtering": true,
+  "supports_streaming": false,
+  "model_doc_link": "https://abstract.inc/docs",
+  "setup_steps": [
+    "Run `abstract login`, or create a key at https://platform.abstract.inc/keys",
+    "Paste the key above as ABSTRACT_API_KEY"
+  ]
+}
